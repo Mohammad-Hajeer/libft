@@ -27,8 +27,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (head);
 }
-
-void *to_upper_content(void *content)
+/*
+static void *to_upper_content(void *content)
 {
     char    *str;
     char    *new_str;
@@ -48,7 +48,7 @@ void *to_upper_content(void *content)
     return (new_str);
 }
 
-void print_content(void *content)
+static void print_content(void *content)
 {
     printf("%s\n", (char *)content);
 }
@@ -73,7 +73,7 @@ int main(void)
     printf("Original list:\n");
     ft_lstiter(node1, print_content);
 
-    new_list = ft_lstmap(node1, to_upper_content, delet);
+    new_list = ft_lstmap(node1, to_upper_content, free);
 
     printf("\nNew list:\n");
     ft_lstiter(new_list, print_content);
@@ -81,8 +81,8 @@ int main(void)
     printf("\nOriginal list after map:\n");
     ft_lstiter(node1, print_content);
 
-    ft_lstclear(&node1, delet);
-    ft_lstclear(&new_list, delet);
+    ft_lstclear(&node1, free);
+    ft_lstclear(&new_list, free);
 
     return (0);
-}
+}*/

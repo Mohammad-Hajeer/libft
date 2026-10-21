@@ -10,26 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <unistd.h>
-#include <stdio.h>
-*/
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t ft_strlen(const char *s)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
-	while (*str != '\0')
+	while (*s != '\0')
 	{
 		count++;
-		str++;
+		s++;
 	}
 	return (count);
 }
 /*
 int	main(void)
 {
-	printf("%d\n",ft_strlen("mohajeer"));
+	printf("%zu\n",ft_strlen("mohajeer"));
 	return (0);
-}*/
+}
+*/

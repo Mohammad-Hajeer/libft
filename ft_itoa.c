@@ -1,7 +1,7 @@
 
 #include "libft.h"
 
-int	countnum(int n)
+static int	countnum(int n)
 {
 	int			i;
 	long long	num;
@@ -45,8 +45,8 @@ char	*ft_itoa(int n)
 		ptr[0] = '-';
 	return (ptr);
 }
-
+/*
 int main(void)
 {
     printf("%s\n",ft_itoa(-2147483648));
-}
+}*/

@@ -15,35 +15,34 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	int	j;
-	char *bigg;
-	char *littlee;
+	size_t	j;
 
-	bigg = (char *)big;
-	littlee = (char *)little;
-	j = 0;
 	i = 0;
-	if (littlee[0] == '\0')
-		return (bigg);
-	while (i < len && bigg[i] != '\0')
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (i < len && big[i] != '\0')
 	{
 		j = 0;
-		while ((i + j) < len && bigg[i + j] != '\0' && bigg[i + j] == littlee[j])
+		while ((i + j) < len && big[i + j] != '\0'
+		&& big[i + j] == little[j])
 		{
 			j++;
-			if (littlee[j] == '\0')
-				return (&bigg[i]);
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 int main(void)
 {
-	char str[] = {"Foo Bar Baz"};
-	char tofind[] = {"Bar"};
+	//char str[] = {"Foo Bar Baz"};
+	//char tofind[] = {"Bar"};
 	//printf("%s\n",strstr(str,tofind));
-	printf("%s\n",ft_strnstr(str,tofind,7));
-}
-*/
+	//printf("%s\n",ft_strnstr(str,tofind,7));
+	printf("%s\n", ft_strnstr("Foo Bar Baz", "Bar", 7));
+	printf("%s\n", ft_strnstr("Foo Bar Baz", "Bar", 6));
+	printf("%s\n", ft_strnstr("Foo Bar Baz", "Baz", 11));
+	printf("%s\n", ft_strnstr("Foo Bar Baz", "", 0));
+}*/

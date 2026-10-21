@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <string.h>
-#include <stdio.h>
-*/
+#include "libft.h"
 
-int	sizeofstring(const char *s)
+static int	sizeofstring(const char *s)
 {
 	int	i;
 
@@ -24,13 +21,12 @@ int	sizeofstring(const char *s)
 		i++;
 	return (i);
 }
-
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = sizeofstring(s);
-	while (i > 0)
+	while (i >= 0)
 	{
 		if (s[i] == (char) c)
 			return ((char *)&s[i]);
@@ -43,5 +39,8 @@ int main()
 {
     char *str="Mohammad Hajeer";
     printf("%s\n",ft_strrchr(str,'a'));
-}
-*/
+	printf("%s\n", ft_strrchr("Mohammad Hajeer", 'a'));
+	printf("%s\n", ft_strrchr("Mohammad Hajeer", 'M'));
+	printf("%s\n", ft_strrchr("Mohammad Hajeer", 'z'));
+	printf("%s\n", ft_strrchr("Mohammad Hajeer", '\0'));
+}*/

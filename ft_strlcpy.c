@@ -10,14 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
-//#include <stdio.h>
-//#include <bsd/string.h>
+#include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest,const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	c;
+	size_t i;
+	size_t c;
 
 	i = 0;
 	c = 0;
@@ -38,7 +36,7 @@ int main (void)
 {
 	char st[]={"mohammd hajeer"};
 	char des[5];
-	//printf("%d\n",ft_strlcpy(des,st,11));
-	printf("%zu\n",strlcat(des,st,11));
+	printf("%zu\n",ft_strlcpy(des,st,5));
+	//printf("%zu\n",strlcat(des,st,11));
 	printf("%s\n",des); //to test what stored in dest
 }*/

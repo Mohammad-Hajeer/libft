@@ -10,41 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
-//#include <stdio.h>
-//#include <bsd/string.h>
+#include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	ldest;
-	unsigned int	lsrc;
-	unsigned int	c;
-	unsigned int	length;
+	size_t	ldest;
+	size_t	lsrc;
+	size_t	c;
 
 	ldest = 0;
-	lsrc = 0;
+	lsrc = ft_strlen(src);
 	c = 0;
-	while (dest[ldest] != '\0')
+	while (ldest < size && dst[ldest] != '\0')
 		ldest++;
-	while (src[lsrc] != '\0')
-		lsrc++;
-	if (size <= ldest)
+	if (ldest == size)
 		return (lsrc + size);
-	while (src[c] != '\0' && c < (size -1) - ldest)
+	while (src[c] && c < (size -1) - ldest)
 	{
-		dest[ldest + c] = src[c];
+		dst[ldest + c] = src[c];
 		c++;
 	}
-	length = lsrc + ldest;
-	dest[ldest + c] = '\0';
-	return (length);
+	dst[ldest + c] = '\0';
+	return (lsrc + ldest);
 }
 /*
 int main(void)
 {
 	char src[] = {"Hajeer"};
 	char dest[] = {"Hajeer"};
-	printf("%zu\n",strlcat(dest,src,8));
-	//printf("%d\n",ft_strlcat(dest,src,8));
+	//printf("%zu\n",strlcat(dest,src,8));
+	printf("%zu\n",ft_strlcat(dest,src,0));
 	printf("%s\n",dest);
 }*/

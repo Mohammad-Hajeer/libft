@@ -1,45 +1,36 @@
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    int i;
-    char *ptr;
+	size_t	i;
+	char	*ptr;
 
-    i = 0;
-    while(s[i] != '\0')
-    {
-        i++;
-    }
-
-    if(start >= i)
-    {
-        ptr = malloc(1);
-        if (ptr == NULL)
-		    return (NULL);
-        ptr[0] = '\0';
-        return (ptr);
-    }
+	i = ft_strlen(s);
+	if (start >= i)
+		return (ft_strdup(""));
 	if (len > i - start)
 		len = i - start;
 	ptr = malloc(len + 1);
-    if (ptr == NULL)
+	if (ptr == NULL)
 		return (NULL);
 	i = 0;
-    while (s[start] != '\0' && i < len)
-    {
-        ptr[i] = s[start];
-        i++;
-        start++;
-    }
-    ptr[i] = '\0';
-    return (ptr);
-
+	while (i < len)
+	{
+		ptr[i] = s[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
-
+/*
 int main(void)
 {
     const char *s1 = "Mohammad Hajeer";
     char *s3 = ft_substr(s1,2,8);
     printf("%s\n",s3);
+    printf("%s\n", ft_substr("Mohammad Hajeer", 2, 8));
+    printf("%s\n", ft_substr("Hello", 2, 10));
+    printf("%s\n", ft_substr("Hello", 5, 3));
+    printf("%s\n", ft_substr("Hello", 0, 0));
     free(s3);
-}
+}*/

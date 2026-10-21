@@ -10,10 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <string.h>
-#include <stdio.h>
-*/
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
@@ -25,6 +23,8 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
 	return (NULL);
 }
 /*
@@ -32,5 +32,4 @@ int main()
 {
     char *str="Mohammad Hajeer";
     printf("%s\n",ft_strchr(str,'a'));
-}
-*/
+}*/

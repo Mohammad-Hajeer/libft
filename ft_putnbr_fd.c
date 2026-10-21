@@ -1,52 +1,24 @@
 #include "libft.h"
 
-int	countnum(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	long long   i;
 	long long	num;
+	char		c;
 
-	i = 1;
 	num = n;
-	while (num > 0)
+	if (num < 0)
 	{
-		i*=10;
-		num /= 10;
+		write(fd, "-", 1);
+		num = -num;
 	}
-	return (i/10);
-}
-
-void    ft_putnbr_fd(int n, int fd)
-{
-    long long i;
-    char c;
-
-    if (n == -2147483648)
-    {
-        write (fd, "-2147483648", 11);
-        return ;
-    }
-    else if (n == 0)
-    {
-        write (fd, "0", 1);
-        return ;
-    }
-    if (n < 0)
-    {
-        write (fd, "-", 1);
-        n = -n;
-    }
-    i = countnum(n);
-    while (i > 0)
-    {
-        c =  (n / i) + '0';
-        write (fd, &c, 1);
-        n = n % i;
-        i/=10;
-    }
+	if (num > 9)
+		ft_putnbr_fd(num / 10, fd);
+	c = num % 10 + '0';
+	write(fd, &c, 1);
 }
 /*
 int main(void)
 {
     //printf("%d\n",countnum(1234));
-    ft_putnbr_fd(1234,1);
+    ft_putnbr_fd(-2147483648,1);
 }*/

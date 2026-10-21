@@ -7,15 +7,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
     int c;
     char *ptr;
 
-    i = 0;
-    c = 0;
-    while (s1[i] !='\0')
-        i++;
-    while (s2[c] != '\0')
-        {
-            i++;
-            c++;
-        }
+    i = ft_strlen(s1) + ft_strlen(s2);
     ptr = malloc(i+1);
     if(ptr == NULL)
         return (NULL);

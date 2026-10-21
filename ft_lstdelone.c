@@ -1,18 +1,19 @@
 #include "libft.h"
 
-void delet(void *fr)
-{
-    free(fr);
-}
-
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    if (!lst)
+    if (!lst || !del)
         return ;
     del(lst->content);
     free (lst);
 }
 /*
+
+static void delet(void *fr)
+{
+    free(fr);
+}
+
 int main(void)
 {
     t_list *node1, *node2, *node3, *node4;
