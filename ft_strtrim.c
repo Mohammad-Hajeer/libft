@@ -2,7 +2,6 @@
 
 static int	skip(char const *s1, char const *set)
 {
-	int	i;
 	int	j;
 
 	j = 0;
