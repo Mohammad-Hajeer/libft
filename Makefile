@@ -25,3 +25,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+#ar arrcive 
+#rcs r:reblace c:creat s:sorting
