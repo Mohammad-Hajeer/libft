@@ -1,17 +1,20 @@
 #include "libft.h"
 
-void	*ft_calloc(size_t nelem, size_t elsize)
+void	*ft_calloc(size_t nmemb, size_t size)
+
 {
 	void	*ptr;
 	size_t	i;
 	char	*byte;
 
 	i = 0;
-	ptr = malloc(nelem * elsize);
+	if (nmemb != 0 && size > ((size_t) -1) / nmemb)
+		return (NULL);
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
 	byte = (char *)ptr;
-	while (i < (nelem * elsize))
+	while (i < (nmemb * size))
 	{
 		byte[i] = 0;
 		i++;

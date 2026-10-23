@@ -12,12 +12,12 @@
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *s);
-void	*ft_calloc(size_t nelem, size_t elsize);
-int		ft_isalnum(int num);
-int		ft_isalpha(int num);
-int		ft_isascii(int num);
-int		ft_isdigit(int num);
-int		ft_isprint(int num);
+void	*ft_calloc(size_t nmemb, size_t size);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 char	*ft_itoa(int n);
 
 typedef struct s_list
