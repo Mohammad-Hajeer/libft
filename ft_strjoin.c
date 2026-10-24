@@ -1,31 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/24 13:17:35 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 13:17:36 by mohajeer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    int i;
-    int j;
-    int c;
-    char *ptr;
+	int		i;
+	int		j;
+	int		c;
+	char	*ptr;
 
-    i = ft_strlen(s1) + ft_strlen(s2);
-    ptr = malloc(i+1);
-    if(ptr == NULL)
-        return (NULL);
-    c = 0;
-    while(s1[c] != '\0')
-    {
-        ptr[c] = s1[c];
-        c++;
-    }
-    j = 0;
-    while(s2[j] != '\0')
-    {
-        ptr[c] = s2[j];
-        c++;
-        j++;
-    }
-    ptr[c] = '\0';
-    return (ptr);
+	i = ft_strlen(s1) + ft_strlen(s2);
+	ptr = malloc(i + 1);
+	if (ptr == NULL)
+		return (NULL);
+	c = 0;
+	while (s1[c] != '\0')
+	{
+		ptr[c] = s1[c];
+		c++;
+	}
+	j = 0;
+	while (s2[j] != '\0')
+	{
+		ptr[c] = s2[j];
+		c++;
+		j++;
+	}
+	ptr[c] = '\0';
+	return (ptr);
 }
 /*
 int main (void)

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 15:49:37 by mohajeer          #+#    #+#             */
-/*   Updated: 2026/09/25 16:03:44 by mohajeer         ###   ########.fr       */
+/*   Created: 2026/10/24 12:38:30 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 12:38:31 by mohajeer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t          i;
-	unsigned char   *s11;
-	unsigned char   *s22;
+	size_t			i;
+	unsigned char	*s11;
+	unsigned char	*s22;
 
 	s11 = (unsigned char *)s1;
 	s22 = (unsigned char *)s2;

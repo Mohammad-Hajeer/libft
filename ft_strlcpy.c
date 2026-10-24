@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/07 11:32:46 by mohajeer          #+#    #+#             */
-/*   Updated: 2026/06/07 11:33:00 by mohajeer         ###   ########.fr       */
+/*   Created: 2026/10/24 13:20:57 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 13:20:59 by mohajeer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest,const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t c;
+	size_t	i;
+	size_t	c;
 
 	i = 0;
 	c = 0;
@@ -25,10 +25,10 @@ size_t	ft_strlcpy(char *dest,const char *src, size_t size)
 		return (i);
 	while (src[c] != '\0' && size -1 > c)
 	{
-		dest[c] = src[c];
+		dst[c] = src[c];
 		c++;
 	}
-	dest[c] = '\0';
+	dst[c] = '\0';
 	return (i);
 }
 /*

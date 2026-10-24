@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 11:19:55 by mohajeer          #+#    #+#             */
-/*   Updated: 2026/06/21 12:21:42 by mohajeer         ###   ########.fr       */
+/*   Created: 2026/10/24 12:23:29 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 12:23:36 by mohajeer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	n;
-	int sign;
+	int	sign;
 
 	i = 0;
 	sign = 1;

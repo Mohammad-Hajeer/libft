@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 17:13:41 by mohajeer          #+#    #+#             */
-/*   Updated: 2026/06/03 17:38:36 by mohajeer         ###   ########.fr       */
+/*   Created: 2026/10/24 13:23:15 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 13:23:16 by mohajeer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	count;
 

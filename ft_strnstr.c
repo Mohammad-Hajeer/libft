@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 16:37:35 by mohajeer          #+#    #+#             */
-/*   Updated: 2026/09/25 16:47:54 by mohajeer         ###   ########.fr       */
+/*   Created: 2026/10/24 13:25:30 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 13:25:31 by mohajeer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		j = 0;
 		while ((i + j) < len && big[i + j] != '\0'
-		&& big[i + j] == little[j])
+			&& big[i + j] == little[j])
 		{
 			j++;
 			if (little[j] == '\0')

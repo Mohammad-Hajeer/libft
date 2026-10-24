@@ -1,28 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/24 13:10:40 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 13:10:41 by mohajeer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static size_t count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
-    size_t i;
-    size_t count;
-    size_t flag;
+	size_t	i;
+	size_t	count;
+	size_t	flag;
 
-    i = 0;
-    count = 0;
-    flag = 0;
-    while (s[i])
-    {
-        if (s[i] != c)
-            count++;//6 0
-        else if (count > 0)
-        {
-            flag++;//4
-            count = 0;//1
-        }
-        i++;
-    }
-    if (count > 0)
-        flag++;
-    return (flag); 
+	i = 0;
+	count = 0;
+	flag = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+			count++;
+		else if (count > 0)
+		{
+			flag++;
+			count = 0;
+		}
+		i++;
+	}
+	if (count > 0)
+		flag++;
+	return (flag);
 }
 
 static char	**free_split(char **split, size_t j)
@@ -41,13 +53,13 @@ static char	**fill_split(char **split, char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (s[i])// "hello  world 42 Amman"
+	while (s[i])
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		start = i; //7
+		start = i;
 		while (s[i] && s[i] != c)
-			i++;//12
+			i++;
 		if (i > start)
 		{
 			split[j] = ft_substr(s, start, i - start);
@@ -71,6 +83,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (fill_split(split, s, c));
 }
+
 /*
 int	main(void)
 {

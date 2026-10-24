@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mohajeer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 11:52:05 by mohajeer          #+#    #+#             */
-/*   Updated: 2026/09/25 11:52:06 by mohajeer         ###   ########.fr       */
+/*   Created: 2026/10/24 13:26:38 by mohajeer          #+#    #+#             */
+/*   Updated: 2026/10/24 13:26:38 by mohajeer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static int	sizeofstring(const char *s)
 		i++;
 	return (i);
 }
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
